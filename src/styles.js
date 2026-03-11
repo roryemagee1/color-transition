@@ -26,9 +26,6 @@ const fadeOut = keyframes`
     opacity: 0;
   }
 `
-
-export const Frame = styled.header``
-
 export const Container = styled.div`
 position: relative;
 display: flex;
