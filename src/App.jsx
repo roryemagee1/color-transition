@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Container, Background } from "./styles"
 import './App.css'
 
-// import reactImg from './assets/react.svg'
 // import day from './assets/day.svg'
 // import evening from './assets/evening.svg'
 import day from './assets/day2.jpg'
 import evening from './assets/evening2.jpg'
 
-function App() {
+export default function App() {
   const [ isEvening, setIsEvening ] = useState(false);
 
   useEffect(() => {
@@ -20,16 +18,9 @@ function App() {
   }, [])
 
   return (
-    <>
-      {/* <img src={reactImg} className="image-one" alt="day image"/> */}
-      {/* <img src={day} className="image-one" alt="day image"/>
-      <img src={evening} className="image-two" alt="evening image"/> */}
-      <Container>
-        <Background src={day} className={ isEvening ? "fade-out" : "fade-in"} />
-        <Background src={evening} className={ isEvening ? "fade-in" : "fade-out"} />
-       </Container>
-    </>
+    <div className="container">
+      <img src={day} className={ isEvening ? "background fade-out" : "background fade-in"} />
+      <img src={evening} className={ isEvening ? "background fade-in" : "background fade-out"} />
+  </div>
   )
 }
-
-export default App
